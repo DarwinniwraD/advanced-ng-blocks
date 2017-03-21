@@ -1,22 +1,28 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
+;
+var Employee = (function () {
+    function Employee() {
+    }
+    return Employee;
+}());
+exports.Employee = Employee;
+;
+var EMPLOYEES = [
+    { emp_name: 'A', emp_des: '1221' },
+    { emp_name: 'B', emp_des: '1222' },
+    { emp_name: 'C', emp_des: '1233' },
+    { emp_name: 'D', emp_des: '1234' },
+    { emp_name: 'E', emp_des: '1235' },
+    { emp_name: 'F', emp_des: '1236' },
+    { emp_name: 'G', emp_des: '1238' },
+];
 var appComponent = (function () {
     function appComponent() {
+        this.name = "ngAPP";
+        this.employees = EMPLOYEES;
     }
     return appComponent;
 }());
-appComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        template: '<h2>first app from angular2</h2>'
-    })
-], appComponent);
 exports.appComponent = appComponent;
 //# sourceMappingURL=app.component.js.map
