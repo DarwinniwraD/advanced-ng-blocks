@@ -7,18 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var employee_service_1 = require("./employee.service");
-var appComponent = (function () {
-    function appComponent() {
+var mock_employee_1 = require("./mock-employee");
+var EmpolyeeService = (function () {
+    function EmpolyeeService() {
     }
-    return appComponent;
+    EmpolyeeService.prototype.getEmployee = function () {
+        return Promise.resolve(mock_employee_1.EMPLOYEES);
+    };
+    return EmpolyeeService;
 }());
-appComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        template: "\n\t<h2>first app from angular2, the app name is {{name}}</h2>\n\t<employee-template></employee-template>\n\t",
-        providers: [employee_service_1.EmpolyeeService]
-    })
-], appComponent);
-exports.appComponent = appComponent;
-//# sourceMappingURL=app.component.js.map
+EmpolyeeService = __decorate([
+    core_1.Injectable()
+], EmpolyeeService);
+exports.EmpolyeeService = EmpolyeeService;
+//# sourceMappingURL=employee.service.js.map
